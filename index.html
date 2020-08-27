@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title>Primitive</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+  <script src="src/Utils.js"></script>
+  <script src="src/Timer.js"></script>
+  <script src="src/Stats.js"></script>
+  <script src="src/Random.js"></script>
+  <script src="src/Optimize.js"></script>
+  <script src="src/State.js"></script>
+  <script src="src/Triangle.js"></script>
+  <script src="src/Rectangle.js"></script>
+  <script src="src/Circle.js"></script>
+  <script src="src/Ellipse.js"></script>
+  <script src="src/RotatedRectangle.js"></script>
+  <script src="src/Scanline.js"></script>
+  <script src="src/Worker.js"></script>
+  <script src="src/Model.js"></script>
+  <script src="page.js"></script>
+</head>
+<body class="bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h2>Primitive</h2>
+        <p class="lead">Generate image from primitive shape, drag and drop an image to replace the default one</p>
+        <p>Source: https://github.com/croquelois/primitive</p>
+        <p>Based on: https://github.com/fogleman/primitive</p>
+      </div>
+  
+      <div class="row text-center">
+        <img  class="d-block mx-auto" id="imgSrc" src="img/Peppers.png">
+      </div>
+      
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <label for="shape">Shape</label>
+          <select class="custom-select d-block w-100" id="shape" required>
+            <option value="Triangle" selected>Triangle</option>
+            <option value="Rectangle">Rectangle</option>
+            <option value="Ellipse">Ellipse</option>
+            <option value="Circle">Circle</option>
+            <option value="RotatedRectangle">Rotated Rectangle</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid shape.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="count">Count</label>
+          <input type="text" class="form-control" id="count" value="100" required>
+          <div class="invalid-feedback">
+            count required.
+          </div>
+        </div>
+      </div>
+        
+      <button id="run" class="btn btn-primary btn-lg btn-block mb-2">Start the process</button>
+      
+      <div class="row text-center mb-2">
+        <canvas class="d-block mx-auto" id="result" width="256" height="256" style="border:1px solid #000000;"></canvas>
+      </div>
+      <div id="info" class="row alert alert-info" role="alert">
+  
+      </div>
+</body>
+</html>
