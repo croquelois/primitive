@@ -23,7 +23,6 @@ class Model {
     let state = worker.bestHillClimbState(shapeType, alpha, 1000, 100, 16);
     //let state = worker.randomState(shapeType, alpha);
     this.add(state.shape, state.alpha);
-    console.log(Utils.differenceFull(this.target, this.current, this.size, 4, this.params));
     for(let i=0;i<n;i++){
       worker.init(this.current, this.score);
       let a = state.energy();
