@@ -19,7 +19,7 @@ class Scanline {
     return lines.filter(line => {
       if(line.y < 0 || line.y >= h)
         return false;
-      if(line.x1 >= w || line.x3 < 0)
+      if(line.x1 >= w || line.x2 < 0)
         return false;
       line.x1 = Utils.clampInt(line.x1, 0, w-1);
       line.x2 = Utils.clampInt(line.x2, 0, w-1);
